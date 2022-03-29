@@ -3,7 +3,7 @@ import './Feed.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
-const Feed = ({reposData,userName, page}) => {
+const Feed = ({reposData,userName}) => {
   const showRepoCard = reposData.map((item,index) => (
         <Link
           key= {item.name}
@@ -26,7 +26,7 @@ const Feed = ({reposData,userName, page}) => {
 
   return (
       <div className='repos-container'>
-        {page >= 2 ? (<>{showRepoCard}</>):(<div></div>)}
+        {showRepoCard}
       </div>
   )
 }

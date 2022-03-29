@@ -59,12 +59,32 @@ const handleSubmit = (e) => {
 };
 
 // 一開始先預設在example
-useEffect(() => {
-  fetch(`https://api.github.com/users/example`)
+useEffect(async () => {
+  await fetch(`https://api.github.com/users/CSSEGISandData`)
     .then(res => res.json())
     .then(data => {
       setData(data)
     });
+  await fetch(`https://api.github.com/users/CSSEGISandData/repos`)
+    .then(res => res.json())
+    .then((data) => {
+      const newRepos = Array.from(data.map((item) => [
+        item.name,
+        item.svn_url,
+        item.stargazers_count,
+        item.language
+      ]), (item) => {
+        return {
+          name : item[0],
+          svn_url : item[1],
+          stargazers_count : item[2],
+          language : item[3]
+        }})
+      setReposData(() =>[...newRepos])
+      if(data.length < 10){
+        setHasMore(false);
+      }
+    })
 },[]);
 
 // 接收視窗至底部的訊息
