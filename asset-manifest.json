@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Github-Viewer/static/css/main.39a88896.css",
-    "main.js": "/Github-Viewer/static/js/main.9217b1c4.js",
+    "main.js": "/Github-Viewer/static/js/main.a9cb5436.js",
     "index.html": "/Github-Viewer/index.html",
     "main.39a88896.css.map": "/Github-Viewer/static/css/main.39a88896.css.map",
-    "main.9217b1c4.js.map": "/Github-Viewer/static/js/main.9217b1c4.js.map"
+    "main.a9cb5436.js.map": "/Github-Viewer/static/js/main.a9cb5436.js.map"
   },
   "entrypoints": [
     "static/css/main.39a88896.css",
-    "static/js/main.9217b1c4.js"
+    "static/js/main.a9cb5436.js"
   ]
 }
