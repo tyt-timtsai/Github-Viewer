@@ -154,25 +154,39 @@ async function fetchRepos(){
         </div>
    
         <Routes>
-          <Route path='/Github-Viewer/' exact element={<Home
-            userName={userName}
-            avatar={avatar}
-            followers={followers}
-            following={following}
-            repos={repos}
-            url={url}
-            gists={gists}
-            error={error}
-            handleSearch={handleSearch}
-            handleSubmit={handleSubmit}
-          />}/>
-          <Route path={`/Github-Viewer/user/${userName}/repos`} element={<ReposList
-            userName={userName}
-            reposData={reposData}
-            hasMore={hasMore}
-            page={page}
-          />}/>
-          <Route path={`/Github-Viewer/user/${userName}/repos/:id`} element={<ReposPage userName={userName}/>}/>
+          <Route 
+            path='/Github-Viewer/' exact 
+            element={
+              <Home
+                userName={userName}
+                avatar={avatar}
+                followers={followers}
+                following={following}
+                repos={repos}
+                url={url}
+                gists={gists}
+                error={error}
+                handleSearch={handleSearch}
+                handleSubmit={handleSubmit}
+              />}
+          />
+          <Route 
+            path={`/Github-Viewer/user/${userName}/repos`} 
+            element={
+              <ReposList
+                userName={userName}
+                reposData={reposData}
+                hasMore={hasMore}
+                page={page}
+              />}
+          />
+          <Route 
+            path={`/Github-Viewer/user/${userName}/repos/:id`} 
+            element={
+              <ReposPage 
+                userName={userName}
+              />}
+          />
           <Route path='*' element={<ErrorPage />}/>
         </Routes>
       </div>

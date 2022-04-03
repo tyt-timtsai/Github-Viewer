@@ -77,6 +77,18 @@
     font-size: var(--tiny-font-size);
 }
 
+/* 中型裝置 */
+@media screen and (max-width: 576px) {
+    .repos-container{
+        max-width: 100vw;
+        gap: 5px;
+        grid-template-columns: 1fr;
+    }
+    .cards{
+        width: 260px;
+    }
+}
+
 /* 大型裝置 */
 @media screen and (min-width: 1024px){
     .repos-container{
